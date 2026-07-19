@@ -5,122 +5,76 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Katarzyna Królak – Gabinet Psychologiczny</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1; }
         .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .fade-in { animation: fadeIn 0.8s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        html { scroll-padding-top: 80px; } /* Offset dla fixed nav */
+        .nav-link-active { font-weight: 700; border-bottom: 2px solid #334142; padding-bottom: 0.25rem; color: #334142; }
     </style>
 </head>
-<body class="bg-[#fbf9f4] text-[#1b1c19] font-Inter selection:bg-[#d6e5e6]">
-    <nav class="fixed top-0 z-50 w-full bg-[#fbf9f4]/80 glass-header border-b border-[#c2c7c7] h-20">
-        <div class="flex justify-between items-center w-full px-6 md:px-10 max-w-[1120px] mx-auto h-full">
-            <a class="text-2xl font-Playfair text-[#334142] tracking-tight" href="#">Katarzyna Królak</a>
+<body class="bg-background text-on-surface font-body-md">
+    <nav class="docked full-width top-0 sticky z-50 bg-surface/80 glass-header shadow-sm h-20 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-gutter max-w-container-max-width mx-auto h-full">
+            <a class="text-headline-md font-headline-md text-primary tracking-tight" href="#">Katarzyna Królak</a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-[#424848] text-sm font-medium hover:text-[#334142]" href="#o-mnie">O mnie</a>
-                <a class="text-[#424848] text-sm font-medium hover:text-[#334142]" href="#wsparcie">Obszary wsparcia</a>
-                <a class="text-[#424848] text-sm font-medium hover:text-[#334142]" href="#etyka">Etyka</a>
-                <a class="text-[#424848] text-sm font-medium hover:text-[#334142]" href="#kontakt">Rezerwacja</a>
-                <a class="bg-[#334142] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90" href="#kontakt">Umów wizytę</a>
+                <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary" href="#o-mnie">O mnie</a>
+                <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary" href="#wsparcie">Obszary wsparcia</a>
+                <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary" href="#etyka">Etyka</a>
+                <a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md" href="#kontakt">Umów wizytę</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-20">
-        <section class="py-16 md:py-24 px-6 md:px-10 max-w-[1120px] mx-auto" id="o-mnie">
+    <main>
+        <section class="py-section-gap-lg px-gutter max-w-container-max-width mx-auto" id="o-mnie">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-7 fade-in">
-                    <span class="text-[#536162] text-xs uppercase tracking-widest mb-3 block font-medium">Psycholog • Psychoterapeuta w procesie</span>
-                    <h1 class="font-Playfair text-4xl md:text-5xl text-[#334142] leading-tight mb-6">Katarzyna Królak – Gabinet Psychologiczny</h1>
-                    <div class="space-y-5 text-[#424848] text-lg leading-relaxed">
-                        <p>Jestem psycholożką i wspieram osoby dorosłe w radzeniu sobie z kryzysami oraz wymagającymi, obciążającymi sytuacjami życiowymi.</p>
-                        <p class="font-medium text-[#1b1c19]">Tworzę bezpieczną przestrzeń, w której pomagam uporządkować to co się dzieje, lepiej zrozumieć siebie i swoją sytuację oraz krok po kroku szukać rozwiązań.</p>
-                    </div>
+                    <h1 class="font-display text-display text-primary leading-tight mb-8">Katarzyna Królak – Gabinet Psychologiczny</h1>
+                    <p class="text-on-surface-variant font-body-lg">Jestem psycholożką i wspieram osoby dorosłe w radzeniu sobie z kryzysami.</p>
                 </div>
-                <div class="md:col-span-5 relative flex justify-center">
-                    <div class="w-full max-w-sm mx-auto md:max-h-[500px] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                        <img class="w-full h-full object-cover" src="FotoKK.png" alt="Zdjęcie Katarzyny Królak">
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+                        <img src="FotoKK.png" class="w-full h-full object-cover" alt="Zdjęcie Katarzyny Królak">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-[#f0eee9]" id="wsparcie">
-            <div class="px-6 md:px-10 max-w-[1120px] mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-Playfair text-3xl md:text-4xl text-[#334142] mb-4">Obszary wsparcia</h2>
-                    <p class="text-[#424848] max-w-xl mx-auto">Pomagam w sytuacjach, które wymagają profesjonalnej obecności i specjalistycznej wiedzy.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-8 rounded-2xl border border-[#e4e2dd] shadow-sm">
-                        <h3 class="text-xl font-semibold text-[#334142] mb-3">Utrata bliskiej osoby</h3>
-                        <p class="text-[#424848] text-sm">Proces żałoby i odnalezienie spokoju w nowej rzeczywistości.</p>
+        <section class="py-section-gap-lg bg-surface-container-low" id="wsparcie">
+            <div class="px-gutter max-w-container-max-width mx-auto">
+                <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Obszary wsparcia</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
+                        <h3 class="font-headline-md text-primary mb-2">Utrata bliskiej osoby</h3>
+                        <p>Proces żałoby i odnalezienie spokoju.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl border border-[#e4e2dd] shadow-sm">
-                        <h3 class="text-xl font-semibold text-[#334142] mb-3">Zmiany życiowe</h3>
-                        <p class="text-[#424848] text-sm">Rozstanie, utrata pracy, diagnoza – wsparcie w adaptacji.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl border border-[#e4e2dd] shadow-sm">
-                        <h3 class="text-xl font-semibold text-[#334142] mb-3">Wypalenie zawodowe</h3>
-                        <p class="text-[#424848] text-sm">Odzyskiwanie równowagi i radzenie sobie ze stresem.</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-2xl border border-[#e4e2dd] shadow-sm">
-                        <h3 class="text-xl font-semibold text-[#334142] mb-3">Trudności w relacjach</h3>
-                        <p class="text-[#424848] text-sm">Praca nad komunikacją, granicami i dynamiką w związku.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl border border-[#e4e2dd] shadow-sm sm:col-span-2 lg:col-span-1">
-                        <h3 class="text-xl font-semibold text-[#334142] mb-3">Stres w pracy</h3>
-                        <p class="text-[#424848] text-sm">Mobbing, dyskryminacja, przeciążenie obowiązkami.</p>
+                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant md:col-span-2">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">psychology</span>
+                        <h3 class="font-headline-md text-primary mb-2">Nagłe zmiany życiowe</h3>
+                        <p>Wsparcie w momentach kryzysowych: rozstanie, utrata pracy, diagnoza choroby.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 px-6 md:px-10 max-w-[1120px] mx-auto" id="etyka">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="font-Playfair text-3xl md:text-4xl text-[#334142] mb-6">Zasady pracy</h2>
-                    <p class="text-[#424848] text-lg mb-8 leading-relaxed">Pracuję zgodnie z zasadami etyki zawodowej psychologa, dbając o fundamenty, które dają poczucie bezpieczeństwa.</p>
-                    <ul class="space-y-4 text-[#424848]">
-                        <li class="flex items-center gap-3">✔ Poufność spotkań</li>
-                        <li class="flex items-center gap-3">✔ Bezpieczeństwo i dobro pacjenta</li>
-                        <li class="flex items-center gap-3">✔ Regularna superwizja</li>
-                    </ul>
-                </div>
-                <div class="bg-[#e4e2dd] h-64 rounded-2xl flex items-center justify-center text-[#737878]">
-                    [Miejsce na grafikę/zdjęcie etyki]
-                </div>
-            </div>
+        <section class="py-section-gap-lg px-gutter max-w-container-max-width mx-auto" id="etyka">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Zasady pracy</h2>
+            <ul class="space-y-6">
+                <li class="flex items-center gap-4"><span class="material-symbols-outlined text-primary">verified_user</span> Poufność spotkań</li>
+                <li class="flex items-center gap-4"><span class="material-symbols-outlined text-primary">favorite</span> Bezpieczeństwo i dobro</li>
+            </ul>
         </section>
 
-        <section class="py-16 md:py-24 bg-[#f0eee9]" id="kontakt">
-            <div class="px-6 md:px-10 max-w-[1120px] mx-auto text-center">
-                <h2 class="font-Playfair text-3xl md:text-4xl text-[#334142] mb-6">Umów wizytę</h2>
-                <p class="text-[#424848] mb-12 max-w-lg mx-auto">Wybierz dogodny termin bezpośrednio w kalendarzu poniżej.</p>
-                
-                <div class="bg-white rounded-2xl shadow-lg border border-[#e4e2dd] p-3">
-                    <div style="width:100%; height:600px; overflow:hidden;" id="my-cal-inline-60min"></div>
-                </div>
-                
+        <section class="py-section-gap-lg bg-surface-container" id="kontakt">
+            <div class="px-gutter max-w-container-max-width mx-auto text-center">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-12">Umów wizytę</h2>
+                <div id="my-cal-inline-60min" style="width:100%;height:600px;overflow:hidden;"></div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-[#334142] text-white py-12 px-6">
-        <div class="max-w-[1120px] mx-auto grid md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="font-Playfair text-xl mb-3 text-[#bfcece]">Katarzyna Królak</h4>
-                <p class="text-sm text-[#bfcece]">Gabinet Psychologiczny</p>
-            </div>
-            <div class="text-sm text-[#bfcece] space-y-2">
-                <p>ul. Kresowa 10, Kalisz</p>
-                <p>Tel: +48 508 106 995</p>
-                <p>Email: k.krolak.office@gmail.com</p>
-            </div>
-        </div>
-    </footer>
 
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
