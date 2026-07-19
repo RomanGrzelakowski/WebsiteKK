@@ -237,28 +237,19 @@
     <div class="px-6 max-w-[1120px] mx-auto">
         <h2 class="text-4xl font-Playfair text-[#334142] mb-12 text-center">Umów wizytę</h2>
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div class="lg:col-span-4 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-4 space-y-6">
                 <h3 class="text-2xl font-Playfair text-[#334142]">Zrób pierwszy krok</h3>
-                <p class="text-[#424848] leading-relaxed">Jeśli czujesz, że znajdujesz się w momencie, w którym potrzebujesz wsparcia - zapraszam do kontaktu. Możesz zarezerwować dogodny termin bezpośrednio przez kalendarz lub napisać do mnie.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3 text-[#1b1c19]">
-                        <span class="material-symbols-outlined text-[#334142]">mail</span>
-                        <span>k.krolak.office@gmail.com</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-[#1b1c19]">
-                        <span class="material-symbols-outlined text-[#334142]">location_on</span>
-                        <span>ul. Kresowa 10, Kalisz</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-[#1b1c19]">
-                        <span class="material-symbols-outlined text-[#334142]">call</span>
-                        <span>+48 508 106 995</span>
-                    </div>
+                <p class="text-[#424848]">Jeśli czujesz, że potrzebujesz wsparcia - zapraszam do kontaktu. Możesz zarezerwować termin przez kalendarz lub napisać do mnie.</p>
+                <div class="space-y-3">
+                    <p class="flex items-center gap-2">✉ k.krolak.office@gmail.com</p>
+                    <p class="flex items-center gap-2">📍 ul. Kresowa 10, Kalisz</p>
+                    <p class="flex items-center gap-2">📞 +48 508 106 995</p>
                 </div>
             </div>
 
-            <div class="lg:col-span-8">
-                <div id="my-cal-inline-60min" style="width: 100%; height: 600px; background: white; border-radius: 12px; overflow: hidden;"></div>
+            <div class="lg:col-span-8 bg-white p-4 rounded-xl shadow-sm">
+                <div id="my-cal-inline-60min" style="width: 100%; height: 600px;"></div>
             </div>
         </div>
 
@@ -271,12 +262,8 @@
                 elementOrSelector: "#my-cal-inline-60min",
                 config: {
                     "layout": "month_view",
-                    "useSlotsViewOnSmallScreen": "true",
-                    "theme": "light"
-                },
-                prefill: {
-                    name: "",
-                    email: ""
+                    "theme": "light",
+                    "hideEventTypeDetails": true // TO JEST KLUCZOWE - ukrywa opis i sprawia, że kalendarz jest węższy
                 },
                 calLink: "katarzyna-krolak-bufgxm/60min",
             });
