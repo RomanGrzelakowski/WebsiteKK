@@ -294,13 +294,24 @@
                                     <span class="text-sm">Wróć do wyboru terminu</span>
                                 </button>
                                 <h3 class="font-headline-md text-headline-md text-primary mb-6">Twoje dane</h3>
-                                <form class="space-y-4" id="booking-form">
-                                    <div><label class="block text-sm font-medium text-on-surface-variant mb-1">Imię i nazwisko</label><input class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="Jan Kowalski" required="" type="text"/></div>
-                                    <div><label class="block text-sm font-medium text-on-surface-variant mb-1">Adres e-mail</label><input class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="jan@przyklad.pl" required="" type="email"/></div>
-                                    <div><label class="block text-sm font-medium text-on-surface-variant mb-1">Numer telefonu</label><input class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="+48 000 000 000" required="" type="tel"/></div>
-                                    <div class="pt-4"><button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md text-label-md hover:shadow-lg active:scale-95 transition-all" type="submit">Potwierdź rezerwację</button></div>
-                                </form>
-                            </div>
+<form id="booking-form" action="https://formspree.io/f/xlgqbqdv" method="POST" class="space-y-4">
+    <div>
+        <input type="hidden" name="wybrany_termin" id="hidden-termin-input" value="Brak wybranego terminu">
+        <label class="block text-sm font-medium text-on-surface-variant mb-1">Imię i nazwisko</label>
+        <input name="name" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="Jan Kowalski" required="" type="text"/>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-on-surface-variant mb-1">Adres e-mail</label>
+        <input name="email" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="jan@przyklad.pl" required="" type="email"/>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-on-surface-variant mb-1">Numer telefonu</label>
+        <input name="phone" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="+48 000 000 000" required="" type="tel"/>
+    </div>
+    <div class="pt-4">
+        <button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md text-label-md hover:shadow-lg active:scale-95 transition-all" type="submit">Potwierdź rezerwację</button>
+    </div>
+</form>
                             <div class="hidden text-center py-12" id="booking-success">
                                 <div class="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mx-auto mb-6"><span class="material-symbols-outlined text-4xl text-primary" data-weight="fill">check_circle</span></div>
                                 <h3 class="font-headline-md text-headline-md text-primary mb-4">Dziękuję za zgłoszenie</h3>
@@ -322,9 +333,10 @@
         </div>
     </footer>
     <script>
-        const calendarGrid = document.getElementById('calendar-days');
-        const daysInMonth = 30;
-        const startDay = 4;
+       const calendarGrid = document.getElementById('calendar-days');
+        const daysInMonth = 30; 
+        const startDay = 4; 
+        
         function renderCalendar() {
             calendarGrid.innerHTML = '';
             for (let i = 0; i < startDay; i++) { calendarGrid.innerHTML += '<div class="h-10"></div>'; }
@@ -333,22 +345,63 @@
                 const dayEl = document.createElement('div');
                 dayEl.className = `calendar-day h-10 flex items-center justify-center rounded-lg text-sm cursor-pointer transition-colors ${isDisabled ? 'text-outline-variant disabled cursor-not-allowed opacity-30' : 'text-on-surface font-medium'}`;
                 dayEl.innerText = i;
-                if (!isDisabled) { dayEl.onclick = function() { document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active')); dayEl.classList.add('active'); checkCanGoNext(); }; }
+                if (!isDisabled) {
+                    dayEl.onclick = function() {
+                        document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active'));
+                        dayEl.classList.add('active');
+                        checkCanGoNext();
+                    };
+                }
                 calendarGrid.appendChild(dayEl);
             }
         }
+
         const slots = document.querySelectorAll('.time-slot');
-        slots.forEach(slot => { slot.onclick = () => { slots.forEach(s => s.classList.remove('active')); slot.classList.add('active'); checkCanGoNext(); }; });
+        slots.forEach(slot => {
+            slot.onclick = () => {
+                slots.forEach(s => s.classList.remove('active'));
+                slot.classList.add('active');
+                checkCanGoNext();
+            };
+        });
+
         function checkCanGoNext() {
-            const hasDay = document.querySelector('.calendar-day.active');
-            const hasSlot = document.querySelector('.time-slot.active');
+            const activeDay = document.querySelector('.calendar-day.active');
+            const activeSlot = document.querySelector('.time-slot.active');
             const nextBtn = document.getElementById('next-to-details');
-            if (hasDay && hasSlot) { nextBtn.disabled = false; nextBtn.classList.remove('opacity-50', 'cursor-not-allowed'); } else { nextBtn.disabled = true; nextBtn.classList.add('opacity-50', 'cursor-not-allowed'); }
+            const hiddenInput = document.getElementById('hidden-termin-input');
+            
+            if (activeDay && activeSlot) {
+                nextBtn.disabled = false;
+                nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                // Zapisujemy wybrany termin do ukrytego pola
+                if (hiddenInput) {
+                    hiddenInput.value = `Listopad 2026: Dzień ${activeDay.innerText}, Godzina: ${activeSlot.innerText}`;
+                }
+            } else {
+                nextBtn.disabled = true;
+                nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
         }
+
         function goToStep2() { document.getElementById('booking-step-1').classList.add('hidden'); document.getElementById('booking-step-2').classList.remove('hidden'); }
         function goToStep1() { document.getElementById('booking-step-2').classList.add('hidden'); document.getElementById('booking-step-1').classList.remove('hidden'); }
-        document.getElementById('booking-form').onsubmit = (e) => { e.preventDefault(); document.getElementById('booking-step-2').classList.add('hidden'); document.getElementById('booking-success').classList.remove('hidden'); };
-        function resetBooking() { document.getElementById('booking-success').classList.add('hidden'); document.getElementById('booking-step-1').classList.remove('hidden'); document.getElementById('booking-form').reset(); document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active')); document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active')); checkCanGoNext(); }
+
+        document.getElementById('booking-form').onsubmit = (e) => {
+            // Formspree obsłuży wysyłkę automatycznie dzięki atrybutowi action w <form>
+            document.getElementById('booking-step-2').classList.add('hidden');
+            document.getElementById('booking-success').classList.remove('hidden');
+        };
+
+        function resetBooking() {
+            document.getElementById('booking-success').classList.add('hidden');
+            document.getElementById('booking-step-1').classList.remove('hidden');
+            document.getElementById('booking-form').reset();
+            document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active'));
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+            checkCanGoNext();
+        }
+
         renderCalendar();
     </script>
 </body>
