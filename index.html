@@ -6,109 +6,9 @@
     <title>Katarzyna Królak – Gabinet Psychologiczny</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "error-container": "#ffdad6",
-                        "on-secondary-container": "#55656c",
-                        "on-primary-fixed-variant": "#3b494a",
-                        "tertiary-fixed-dim": "#c4c7c1",
-                        "on-primary": "#ffffff",
-                        "background": "#fbf9f4",
-                        "surface-container-highest": "#e4e2dd",
-                        "on-surface": "#1b1c19",
-                        "on-surface-variant": "#424848",
-                        "on-primary-container": "#bfcece",
-                        "secondary": "#506167",
-                        "outline-variant": "#c2c7c7",
-                        "outline": "#737878",
-                        "secondary-fixed": "#d4e5ed",
-                        "inverse-surface": "#30312e",
-                        "surface-container": "#f0eee9",
-                        "primary": "#334142",
-                        "surface": "#fbf9f4",
-                        "tertiary-container": "#535752",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#444843",
-                        "on-error-container": "#93000a",
-                        "secondary-container": "#d1e3ea",
-                        "secondary-fixed-dim": "#b8c9d1",
-                        "on-error": "#ffffff",
-                        "tertiary": "#3c403b",
-                        "surface-container-low": "#f5f3ee",
-                        "tertiary-fixed": "#e0e3dd",
-                        "primary-container": "#4a5859",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-high": "#eae8e3",
-                        "on-tertiary-fixed": "#191d18",
-                        "error": "#ba1a1a",
-                        "on-tertiary-container": "#c9ccc6",
-                        "inverse-primary": "#bac9ca",
-                        "on-tertiary": "#ffffff",
-                        "inverse-on-surface": "#f2f1ec",
-                        "primary-fixed": "#d6e5e6",
-                        "primary-fixed-dim": "#bac9ca",
-                        "on-primary-fixed": "#101e1f",
-                        "surface-variant": "#e4e2dd",
-                        "surface-tint": "#536162",
-                        "on-background": "#1b1c19",
-                        "surface-bright": "#fbf9f4",
-                        "on-secondary-fixed-variant": "#39494f",
-                        "surface-dim": "#dbdad5",
-                        "on-secondary-fixed": "#0d1e23"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "margin-desktop": "40px",
-                        "container-max-width": "1120px",
-                        "unit": "4px",
-                        "margin-mobile": "20px",
-                        "section-gap-md": "80px",
-                        "section-gap-lg": "120px"
-                    },
-                    "fontFamily": {
-                        "label-sm": ["Inter"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "headline-md": ["Playfair Display"],
-                        "label-md": ["Inter"],
-                        "headline-lg": ["Playfair Display"],
-                        "display": ["Playfair Display"],
-                        "headline-lg-mobile": ["Playfair Display"]
-                    },
-                    "fontSize": {
-                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                        "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}]
-                    }
-                },
-            },
-        }
-    </script>
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1; }
         .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .booking-card { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
-        .calendar-day:hover:not(.disabled) { background-color: #d6e5e6; }
-        .calendar-day.active { background-color: #334142 !important; color: white !important; }
-        .time-slot:hover { border-color: #334142; }
-        .time-slot.active { background-color: #334142; color: white; border-color: #334142; }
         .fade-in { animation: fadeIn 0.8s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .nav-link-active { font-weight: 700; border-bottom: 2px solid #334142; padding-bottom: 0.25rem; color: #334142; }
@@ -123,11 +23,7 @@
                 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#wsparcie">Obszary wsparcia</a>
                 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#etyka">Etyka</a>
                 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#kontakt">Kontakt/Rezerwacja</a>
-                <a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all duration-200" href="#kontakt">Umów wizytę</a>
             </div>
-            <button class="md:hidden text-primary p-2">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
     </nav>
     <main>
@@ -137,278 +33,40 @@
                     <span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-4 block">Psycholog • Psychoterapeuta w procesie</span>
                     <h1 class="font-display text-display text-primary leading-tight mb-8">Katarzyna Królak – Gabinet Psychologiczny</h1>
                     <div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
-                        <p>Jestem psycholożką i wspieram osoby dorosłe w radzeniu sobie z kryzysami oraz wymagającymi, obciążającymi sytuacjami życiowymi - zarówno osobistymi, jak i zawodowymi.</p>
-                        <p>W mojej pracy łączę wiedzę psychologiczną z doświadczeniem pracy z osobami w kryzysie. Bliskie jest mi podejście oparte na uważności, szacunku i autentycznym kontakcie.</p>
-                        <p class="font-medium text-on-surface">Tworzę bezpieczną przestrzeń, w której pomagam uporządkować to co się dzieje, lepiej zrozumieć siebie i swoją sytuację oraz krok po kroku szukać sposobów, które będą dla Ciebie realne i możliwe do wdrożenia.</p>
-                    </div>
-                    <div class="mt-10 flex gap-4">
-                        <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:shadow-lg transition-all" href="#kontakt">Rozpocznij terapię</a>
-                        <a class="border border-outline text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container-low transition-all" href="#wsparcie">Jak mogę pomóc?</a>
+                        <p>Jestem psycholożką i wspieram osoby dorosłe w radzeniu sobie z kryzysami oraz wymagającymi, obciążającymi sytuacjami życiowymi.</p>
                     </div>
                 </div>
                 <div class="md:col-span-5 relative">
                     <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10">
                         <img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="FotoKK.png" alt="Zdjęcie Katarzyny Królak">
                     </div>
-                   
                 </div>
             </div>
         </section>
-        <section class="py-section-gap-lg bg-surface-container-low" id="wsparcie">
-            <div class="px-gutter max-w-container-max-width mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Obszary wsparcia</h2>
-                    <p class="text-on-surface-variant max-w-2xl mx-auto font-body-md text-body-md">Każdy proces jest indywidualny. Pomagam w sytuacjach, które wymagają profesjonalnej obecności i specjalistycznej wiedzy.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-primary">eco</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Utrata bliskiej osoby i proces żałoby</h3>
-                        <p class="text-on-surface-variant font-body-md text-body-md">Towarzyszę w trudnej drodze po stracie, pomagając odnaleźć sens i spokój w nowej rzeczywistości.</p>
-                    </div>
-                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                        <div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-primary">psychology</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Nagłe zmiany życiowe</h3>
-                        <p class="text-on-surface-variant font-body-md text-body-md">Wsparcie w momentach kryzysowych: rozstanie, utrata pracy, diagnoza choroby. Budowanie zasobów do adaptacji w trudnych warunkach.</p>
-                    </div>
-                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow md:col-span-2">
-                        <div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-primary">work_history</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Przeciążenie i wypalenie zawodowe</h3>
-                        <p class="text-on-surface-variant font-body-md text-body-md">Pomoc w odzyskaniu równowagi między życiem prywatnym a zawodowym oraz radzeniu sobie z przewlekłym stresem.</p>
-                    </div>
-                    <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-primary">groups</span>
-                        </div>
-                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Trudności w relacjach</h3>
-                        <p class="text-on-surface-variant font-body-md text-body-md">Praca nad komunikacją, granicami i zrozumieniem dynamiki w bliskich związkach oraz relacjach rodzinnych.</p>
-                    </div>
-                    <div class="bg-primary text-on-primary p-8 md:p-12 rounded-xl shadow-lg md:col-span-3 flex flex-col md:flex-row items-center gap-8">
-                        <div class="flex-1">
-                            <h3 class="font-headline-md text-headline-md mb-4 text-primary-fixed">Środowisko pracy i mobbing</h3>
-                            <p class="opacity-90 font-body-md text-body-md">Doświadczenie mobbingu, dyskryminacji lub innych trudnych sytuacji związanych ze środowiskiem pracy. Bezpieczna przestrzeń do nazwania trudności i szukania rozwiązań.</p>
-                        </div>
-                        <div class="shrink-0">
-                            <a class="inline-block bg-primary-fixed text-on-primary-fixed px-10 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-transform" href="#kontakt">Porozmawiajmy o tym</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-section-gap-lg px-gutter max-w-container-max-width mx-auto" id="etyka">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <img class="rounded-xl shadow-lg border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCleLy1QVHk7pmbez4DhaP1xSsgymFUi_Q4esoJHloJCWKaR9aUfN_JZRkXjuYopRa3ithXv15HWpRgDcE_OrpnvIgn_2IMP1-TxhfBDEVX6_k3vXVdXKK0PKxXkOawA9WhNcJBrop8BfUcu0wU8R1OwGFeXoXygJnYYuaepraESVHdYh3cWrWw1RBhNJc_lKFzujxomTBQXEFM_xJl5_glDikh-bHI1HE950kcAQUo0HyQ45rDLZ_n8w" alt="Zasady etyczne">
-                </div>
-                <div class="order-1 md:order-2">
-                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Zasady pracy</h2>
-                    <p class="text-on-surface-variant font-body-lg text-body-lg mb-10">Pracuję zgodnie z zasadami etyki zawodowej psychologa, dbając o fundamenty, które dają poczucie bezpieczeństwa każdemu pacjentowi.</p>
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">verified_user</span>
-                            <div>
-                                <h4 class="font-headline-md text-headline-md text-primary text-lg">Poufność spotkań</h4>
-                                <p class="text-on-surface-variant font-body-md text-body-md">Wszystko, o czym rozmawiamy, zostaje w gabinecie. To fundament Twojego komfortu.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">favorite</span>
-                            <div>
-                                <h4 class="font-headline-md text-headline-md text-primary text-lg">Bezpieczeństwo i dobro</h4>
-                                <p class="text-on-surface-variant font-body-md text-body-md">Twoje zdrowie psychiczne i poczucie sprawstwa są zawsze priorytetem.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary mt-1">school</span>
-                            <div>
-                                <h4 class="font-headline-md text-headline-md text-primary text-lg">Profesjonalizm</h4>
-                                <p class="text-on-surface-variant font-body-md text-body-md">Stale rozwijam kompetencje i poddaję swoją pracę regularnej superwizji.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="py-section-gap-lg bg-surface-container" id="kontakt">
-            <div class="px-gutter max-w-container-max-width mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-                    <div class="lg:col-span-5">
-                        <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Zrób pierwszy krok</h2>
-                        <p class="text-on-surface-variant font-body-lg text-body-lg mb-8">Jeśli czujesz, że znajdujesz się w momencie, w którym potrzebujesz wsparcia - zapraszam do kontaktu. Możesz zarezerwować dogodny termin bezpośrednio przez kalendarz lub napisać do mnie.</p>
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4 text-on-surface">
-                                <span class="material-symbols-outlined text-primary">mail</span>
-                                <span class="font-label-md text-label-md">k.krolak.office@gmail.com</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-on-surface">
-                                <span class="material-symbols-outlined text-primary">location_on</span>
-                                <span class="font-label-md text-label-md">ul. Kresowa 10, Kalisz</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-on-surface">
-                                <span class="material-symbols-outlined text-primary">call</span>
-                                <span class="font-label-md text-label-md">+48 508 106 995</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-7">
-                        <div class="bg-surface-container-lowest rounded-xl shadow-lg p-8 border border-outline-variant booking-card" id="booking-widget">
-                            <div id="booking-step-1">
-                                <h3 class="font-headline-md text-headline-md text-primary mb-6">Wybierz termin</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div class="calendar-container">
-                                        <div class="flex justify-between items-center mb-4">
-                                            <span class="font-label-md text-label-md text-primary">Listopad 2024</span>
-                                            <div class="flex gap-2">
-                                                <button class="p-1 hover:bg-surface-container rounded-full"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
-                                                <button class="p-1 hover:bg-surface-container rounded-full"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-7 gap-1 text-center mb-2">
-                                            <div class="text-[10px] font-bold text-outline">PN</div><div class="text-[10px] font-bold text-outline">WT</div><div class="text-[10px] font-bold text-outline">ŚR</div><div class="text-[10px] font-bold text-outline">CZ</div><div class="text-[10px] font-bold text-outline">PT</div><div class="text-[10px] font-bold text-outline">SB</div><div class="text-[10px] font-bold text-outline">ND</div>
-                                        </div>
-                                        <div class="grid grid-cols-7 gap-1" id="calendar-days"></div>
-                                    </div>
-                                    <div>
-                                        <span class="font-label-md text-label-md text-outline mb-4 block">Dostępne godziny</span>
-                                        <div class="grid grid-cols-2 gap-3" id="time-slots">
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">09:00</button>
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">10:30</button>
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">12:00</button>
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">14:00</button>
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">15:30</button>
-                                            <button class="time-slot border border-outline-variant p-3 rounded-lg text-sm text-center transition-all">17:00</button>
-                                        </div>
-                                        <button class="w-full mt-6 bg-primary text-on-primary py-4 rounded-xl font-label-md text-label-md opacity-50 cursor-not-allowed transition-all" disabled="" id="next-to-details" onclick="goToStep2()">Dalej</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hidden" id="booking-step-2">
-                                <button class="flex items-center gap-2 text-outline hover:text-primary mb-6 transition-colors" onclick="goToStep1()">
-                                    <span class="material-symbols-outlined text-sm">arrow_back</span>
-                                    <span class="text-sm">Wróć do wyboru terminu</span>
-                                </button>
-                                <h3 class="font-headline-md text-headline-md text-primary mb-6">Twoje dane</h3>
-<form id="booking-form" action="https://formspree.io/f/xlgqbqdv" method="POST" class="space-y-4">
-    <div>
-        <input type="hidden" name="wybrany_termin" id="hidden-termin-input" value="Brak wybranego terminu">
-        <label class="block text-sm font-medium text-on-surface-variant mb-1">Imię i nazwisko</label>
-        <input name="name" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="Jan Kowalski" required="" type="text"/>
-    </div>
-    <div>
-        <label class="block text-sm font-medium text-on-surface-variant mb-1">Adres e-mail</label>
-        <input name="email" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="jan@przyklad.pl" required="" type="email"/>
-    </div>
-    <div>
-        <label class="block text-sm font-medium text-on-surface-variant mb-1">Numer telefonu</label>
-        <input name="phone" class="w-full h-12 px-4 rounded-lg border-outline-variant focus:ring-secondary focus:border-secondary transition-shadow" placeholder="+48 000 000 000" required="" type="tel"/>
-    </div>
-    <div class="pt-4">
-        <button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md text-label-md hover:shadow-lg active:scale-95 transition-all" type="submit">Potwierdź rezerwację</button>
-    </div>
-</form>
-                            <div class="hidden text-center py-12" id="booking-success">
-                                <div class="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mx-auto mb-6"><span class="material-symbols-outlined text-4xl text-primary" data-weight="fill">check_circle</span></div>
-                                <h3 class="font-headline-md text-headline-md text-primary mb-4">Dziękuję za zgłoszenie</h3>
-                                <p class="text-on-surface-variant mb-8">Twoja prośba o rezerwację została wysłana. Skontaktuję się z Tobą w ciągu 24 godzin, aby potwierdzić termin.</p>
-                                <button class="text-primary font-label-md text-label-md underline hover:opacity-80" onclick="resetBooking()">Zrób kolejną rezerwację</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="full-width bg-surface-container">
-        <div class="w-full py-section-gap-md px-gutter max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-            <div class="flex flex-col gap-4 max-w-xs">
-                <span class="font-headline-md text-headline-md text-on-surface">Katarzyna Królak</span>
-                <p class="font-body-md text-body-md text-on-surface-variant">Profesjonalne wsparcie psychologiczne oparte na empatii i etyce zawodowej.</p>
-            </div>
-        </div>
-    </footer>
-    <script>
-       const calendarGrid = document.getElementById('calendar-days');
-        const daysInMonth = 30; 
-        const startDay = 4; 
+
+       <section class="py-section-gap-lg bg-surface-container" id="kontakt">
+    <div class="px-gutter max-w-container-max-width mx-auto text-center">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-12">Umów wizytę</h2>
         
-        function renderCalendar() {
-            calendarGrid.innerHTML = '';
-            for (let i = 0; i < startDay; i++) { calendarGrid.innerHTML += '<div class="h-10"></div>'; }
-            for (let i = 1; i <= daysInMonth; i++) {
-                const isDisabled = i < 15;
-                const dayEl = document.createElement('div');
-                dayEl.className = `calendar-day h-10 flex items-center justify-center rounded-lg text-sm cursor-pointer transition-colors ${isDisabled ? 'text-outline-variant disabled cursor-not-allowed opacity-30' : 'text-on-surface font-medium'}`;
-                dayEl.innerText = i;
-                if (!isDisabled) {
-                    dayEl.onclick = function() {
-                        document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active'));
-                        dayEl.classList.add('active');
-                        checkCanGoNext();
-                    };
-                }
-                calendarGrid.appendChild(dayEl);
-            }
-        }
+        <div style="width:100%;height:600px;overflow:scroll" id="my-cal-inline-60min"></div>
+        
+    </div>
+</section>
 
-        const slots = document.querySelectorAll('.time-slot');
-        slots.forEach(slot => {
-            slot.onclick = () => {
-                slots.forEach(s => s.classList.remove('active'));
-                slot.classList.add('active');
-                checkCanGoNext();
-            };
-        });
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 
-        function checkCanGoNext() {
-            const activeDay = document.querySelector('.calendar-day.active');
-            const activeSlot = document.querySelector('.time-slot.active');
-            const nextBtn = document.getElementById('next-to-details');
-            const hiddenInput = document.getElementById('hidden-termin-input');
-            
-            if (activeDay && activeSlot) {
-                nextBtn.disabled = false;
-                nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-                // Zapisujemy wybrany termin do ukrytego pola
-                if (hiddenInput) {
-                    hiddenInput.value = `Listopad 2026: Dzień ${activeDay.innerText}, Godzina: ${activeSlot.innerText}`;
-                }
-            } else {
-                nextBtn.disabled = true;
-                nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
-            }
-        }
+  Cal("init", "60min", {origin:"https://app.cal.com"});
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
 
-        function goToStep2() { document.getElementById('booking-step-1').classList.add('hidden'); document.getElementById('booking-step-2').classList.remove('hidden'); }
-        function goToStep1() { document.getElementById('booking-step-2').classList.add('hidden'); document.getElementById('booking-step-1').classList.remove('hidden'); }
+  Cal.ns["60min"]("inline", {
+    elementOrSelector:"#my-cal-inline-60min",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+    calLink: "katarzyna-krolak-bufgxm/60min",
+  });
 
-        document.getElementById('booking-form').onsubmit = (e) => {
-            // Formspree obsłuży wysyłkę automatycznie dzięki atrybutowi action w <form>
-            document.getElementById('booking-step-2').classList.add('hidden');
-            document.getElementById('booking-success').classList.remove('hidden');
-        };
-
-        function resetBooking() {
-            document.getElementById('booking-success').classList.add('hidden');
-            document.getElementById('booking-step-1').classList.remove('hidden');
-            document.getElementById('booking-form').reset();
-            document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('active'));
-            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
-            checkCanGoNext();
-        }
-
-        renderCalendar();
-        // To dodaj jako osobny blok kodu w sekcji <script>
-document.getElementById('booking-form').addEventListener('submit', function(e) {
-    document.getElementById('booking-step-2').classList.add('hidden');
-    document.getElementById('booking-success').classList.remove('hidden');
-    // Formularz wyśle się automatycznie dzięki atrybutowi action
-});
-    </script>
+  Cal.ns["60min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 </body>
 </html>
